@@ -4,6 +4,9 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 # ${data.description}
+# ${data.tableOfContents}
+# ${data.profilePicture}
+# ${data.email}
 `;
 }
 

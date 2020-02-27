@@ -13,7 +13,7 @@ const api = {
       request(`https://api.github.com/users/${username}`, options , (err, res, body) => {
         if (err) { return console.log(err); }
         // console.log(body.email, body.avatar_url);
-        resolve(body);
+        resolve({email: body.email, image: body.avatar_url});
       });
     });
   }
