@@ -6,14 +6,17 @@ global.gitData = {};
 // ];
 
 
-// function writeToFile(fileName, data) {
-//   fs = require('fs');
-//   fs.writeFile('/generateMarkdown.js',(data)', function(err) {
-//     if(err) {
-//         return console.log(err);
-//     }
-//   });
-// }
+function writeToFile(fileName, data) {
+  const fs = require('fs');
+  fs.writeFile('ReadThis.md', (data), function(err) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Commit logged");
+    }
+  });
+}
 
 function init() {
   const inquirer = require('inquirer');
@@ -21,7 +24,7 @@ function init() {
     {
       name: 'username',
       message: 'Enter Git Username:',
-      default: 'kffl3496'
+      default: ''
     },
     {
       name: 'title',
@@ -53,4 +56,3 @@ function init() {
 }
 
 init();
-  
